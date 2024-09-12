@@ -2,11 +2,10 @@
 import { motion } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { styles } from "../styles";
-import { experiences, projects } from "../constants";
+import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { Tilt } from "react-tilt";
-import { github } from "../assets";
 
 interface ProjectProps {
   index: number;

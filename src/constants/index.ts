@@ -1,7 +1,6 @@
 import {
   mobile,
   backend,
-  creator,
   web,
   javascript,
   html,
@@ -45,16 +44,12 @@ const services = [
     icon: web,
   },
   {
-    title: "Good solutions",
+    title: "Fullstack developer",
     icon: backend,
   },
   {
     title: "New technology",
     icon: mobile,
-  },
-  {
-    title: "Creativness",
-    icon: creator,
   },
 ];
 

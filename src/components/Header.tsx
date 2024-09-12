@@ -21,14 +21,18 @@ export const Header: React.FC = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <h3 className="text-white">Ebba Maja Olsson</h3>
+          <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 font-bold">
+            Ebba Maja Olsson
+          </h3>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
+                active === link.title
+                  ? "text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-500 font-bold"
+                  : "text-secondary"
               }`}
             >
               <a href={`#${link.id}`} onClick={() => setActive(link.title)}>

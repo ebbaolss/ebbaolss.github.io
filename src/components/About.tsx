@@ -18,14 +18,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.2, 3)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="w-full bg-gradient-to-r from-orange-500 to-pink-500 p-[3px] rounded-[20px] shadow-card"
       >
         <div
           key={index}
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
+          <h3 className="text-[#454441] text-[20px] font-bold text-center">
             {title}
           </h3>
         </div>
@@ -46,7 +46,7 @@ const About: React.FC = () => {
           variants={fadeIn("right", "", 0, 0.5)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Hi! My name is Ebba, im 23 years old and currently studing the 5th
+          👋 Hi! My name is Ebba, im 23 years old and currently studing the 5th
           year of my masters in Informatics: Programming and System Architecture
           at the University of Oslo.
         </motion.p>
@@ -55,7 +55,7 @@ const About: React.FC = () => {
             src={profile}
             variants={fadeIn("left", "spring", 0.1, 1)}
             alt="Profile"
-            className="w-60 h-60 rounded-full object-cover border-2 border-gray-200 shadow-lg mt-5"
+            className="w-60 h-60 rounded-full object-cover border-white-200 shadow-lg "
           />
         </Tilt>
       </motion.div>
