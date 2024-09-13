@@ -1,10 +1,4 @@
 import {
-  mobile,
-  backend,
-  web,
-  javascript,
-  html,
-  css,
   ucberkeley,
   rebel,
   uio,
@@ -14,6 +8,9 @@ import {
   in2030,
   vippsinternship,
   aider,
+  github,
+  linkedin,
+  portfolio,
 } from "../assets";
 
 export const navLinks = [
@@ -33,83 +30,61 @@ export const navLinks = [
     id: "projects",
     title: "Projects",
   },
-  {
-    id: "contact",
-    title: "Contact",
-  },
 ];
 
 const services = [
   {
-    title: "App development",
-    icon: web,
+    title: "LinkedIn",
+    icon: linkedin,
+    url: "https://www.linkedin.com/in/ebba-maja-olsson-b689461ba/",
   },
   {
-    title: "Fullstack developer",
-    icon: backend,
-  },
-  {
-    title: "New technology",
-    icon: mobile,
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML",
-    icon: html,
-  },
-  {
-    name: "CSS",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
+    title: "GitHub",
+    icon: github,
+    url: "https://github.com/ebbaolss",
   },
 ];
 
 const experiences = [
   {
-    title: "Developer at Vipps MobilePay",
+    title: "Developer - Summer internship",
     company_name: "Vipps MobilePay",
     icon: vipps,
     iconBg: "#383E56",
-    date: "June 2024 - August 2024",
-    points: [
-      "IOS-Developer working with swift and Xcode",
-      "Project: Shared Reccuring Payments",
-      "Link to the summer project: https://www.vipps.no/om-oss/nyheter/studenter-med-ukelønn-løsning-i-vipps/",
-    ],
+    date: "Juni 2024 - August 2024",
+    description:
+      "I løpet av sommeren jobbet jeg som utvikler i et internship hos Vipps MobilePay. Der fikk jeg muligheten til å jobbe med IOS-appen til Vipps, hvor vi i team løste problemstillingen gjentatte betalinger mellom personer og deling av faste utgifter. Jeg arbeidet hovedsakelig med Swift for iOS-utvikling og bidro også med noe backend-utvikling ved hjelp av Go. En veldig fin og lærerik sommer der jeg fikk muligheten til å bruke og utvide mine ferdigheter sammen med en god gjeng. 👉 Gå til Projects-seksjonen for å lese mer om sommeren hos Vipps",
+    points: ["Swift, Go, Xcode, Git, Jira"],
   },
   {
     title: "Systemutvikler",
     company_name: "Aider",
     icon: aider,
     iconBg: "#E6DEDD",
-    date: "February 2024 - ",
-    points: ["Low code on the Bubble IO platform"],
+    date: "Februar 2024 -",
+    description:
+      "I løpet av min tid hos Aider har jeg arbeidet med videreutvikling av et internt system laget på low-code plattformen Bubble.io. Der arbeider jeg med å forbedre systemets funksjonalitet, brukeropplevelse og kapasitetshåndtering.",
+    points: ["Bubble.io, Low-code"],
   },
   {
     title: "Event Manager Assistant",
     company_name: "Rebel Oslo",
     icon: rebel,
     iconBg: "#383E56",
-    date: "September 2021 - June 2024",
-    points: [
-      "Rebel er en arena for kunnskapsdeling og denne jobben har lært meg mye om organisering, team-arbeid og skape produkter kunden ønsker.",
-      "Bookinger, kundeansvarlig, kundebehandling, fakturering i Xledger, ansvar for eventer og konferanser i større skala og andre administrative tjenester.",
-    ],
+    date: "September 2021 - Juni 2024",
+    description:
+      "Rebel er en arena for kunnskapsdeling og denne jobben har lært meg mye om organisering, team-arbeid og skape produkter kunden ønsker.  Alt fra bookinger, kundeansvarlig, kundebehandling, fakturering i Xledger, ansvar for eventer og konferanser i større skala og andre administrative tjenester.",
+    points: ["Xledger, Excel, Koordinering og Kundebehandlig"],
   },
   {
     title: "UiO - Studentambassadør for Institutt for informatikk  ",
-    company_name: "University of Oslo",
+    company_name: "Universitetet i Oslo",
     icon: uio,
     iconBg: "#E6DEDD",
-    date: "March 2023",
-    points: [
-      "Var studentambassadør for UiO i forbindelse med åpen dag på informatikk bygget. Her presenterte jeg informatikkstudiet og hadde omvisning for videregående elever.",
-    ],
+    date: "Mars 2023",
+    description:
+      "Var studentambassadør for UiO i forbindelse med åpen dag på informatikk bygget. Her presenterte jeg informatikkstudiet og hadde omvisning for videregående elever. labla",
+    points: [""],
   },
 ];
 
@@ -118,12 +93,12 @@ const education = [
     institution: "University of California, Berkeley",
     icon: ucberkeley,
     iconBg: "#383E56",
-    date: "Aug 2024 - Des 2024",
-    degree: "Computer science - Exchange Semester",
-    info: `During this semester at UC Berkeley, I am engaged in courses in artificial intelligence, algorithmic media design, and frontend architecture.
-    The aim of this semester is to delve deeply into cutting-edge technologies, expand my professional expertise, and challenge myself both technically and linguistically. 
-    This experience enhances my development as a software developer by providing insights and skills that strengthen my ability to contribute to innovative solutions and projects.
-    In addition to my studies, I have joined the Cal Ski Club, and I play both golf and tennis. I am also active in the International Association of Norwegian Students Abroad (ANSA), which organizes events for norwegians.  
+    date: "August 2024 - Desember 2024",
+    degree: "BISP Studyprogram - Computer science",
+    type: "University of California, Berkeley",
+    info: `Dette semesteret er jeg på utveksling ved UC Berkeley, her tar jeg emner innen kunstig intelligens, 
+    algoritmisk mediedesign, entreprenørskap og frontend-arkitektur. Målet med semesteret er å fordype meg i nye teknologier, samt utfordre meg selv både teknisk og språklig.
+    I tillegg til studiene har jeg blitt med i Cal Ski Club, spiller golf og tennis, og aktiv i ANSA som organiserer arrangementer for norske studenter i utlandet.
     `,
     points: ["Courses: ", "Extra: "],
   },
@@ -131,31 +106,37 @@ const education = [
     institution: "University of Oslo (UiO)",
     icon: uio,
     iconBg: "#E6DEDD",
-    date: "Aug 2023 - June 2025",
-    degree: "MSc Informatics: Programming and Systemarchitecture",
-    type: "University of Oslo",
-    info: `
-    I am pursuing a Master’s degree in Informatics with a focus on programming and system architecture. 
-    Core subjects include frontend and app development programming, project work based on agile methodologies, IT management, and ethical hacking. 
-    This education provides me with a comprehensive understanding of both technical skills and project management.`,
+    date: "August 2023 - Juni 2025",
+    degree: "MSc Informatikk: Programmering and Systemarkitektur",
+    type: "Universitetet i Oslo",
+    info: `Studerer siste året på en master i informatikk: programmering og systemarkitektur. Kjernefagene inkluderer frontend- og apputvikling, 
+    prosjektarbeid, agile metoder, IT-management og etisk hacking.
+    `,
     points: ["Courses: ", "Extra: "],
   },
   {
     institution: "University of Oslo (UiO)",
     icon: uio,
     iconBg: "#E6DEDD",
-    date: "August 2020 - June 2023",
-    degree: "BSc Informatics: Programming and Systemarchitecture",
-    type: "University of Oslo",
-    info: `
-    I have a Bachelor’s degree in Informatics, focusing on programming and system architecture.
-     My coursework covered programming in Java, Python, and Kotlin, as well as data systems and information security.
-      The degree also included a software engineering project, which is listed as "Sikt" in the Projects section of my portfolio.`,
+    date: "August 2020 - Juni 2023",
+    degree: "BSc Informatikk: Programmering and Systemarkitektur",
+    type: "Universitetet i Oslo",
+    info: `Bacheloren omfatter programmering i Kotlin, Java, Python, C og SQL, samt datasystemer og informasjonssikkerhet . Graden inkluderer også et større prosjektarbeid der vi i et team laget en android app. 👉 Sjekk det ut under Sikt i Projects-seksjonen.`,
     points: ["Courses: ", "Extra: "],
   },
 ];
 
 const projects = [
+  {
+    name: "Portfolio nettside",
+    date: "August 2024",
+    description:
+      "Har nylig begynt å lære meg react på egenhånd via youtube og har i forbindelse med dette laget denne portefølje-nettsiden ved bruk av react, typescript og vite.",
+    points: ["React, TypeScript, vite"],
+    image: portfolio,
+    pitch: "Sjekk ut prosjektet her👇",
+    source_code_link: "https://github.com/ebbaolss/ebbaolss.github.io",
+  },
   {
     name: "Vipps Summerinternship",
     date: "Juni 2024 - August 2024",
@@ -176,16 +157,6 @@ const projects = [
     image: sikt,
     pitch: "Sjekk ut prosjektet her👇",
     source_code_link: "https://github.com/ebbaolss/IN2000-Sikt",
-  },
-  {
-    name: "Portfolio nettside",
-    date: "August 2024",
-    description:
-      "Har nylig begynt å lære meg react på egenhånd via youtube og har i forbindelse med dette laget denne portefølje-nettsiden ved bruk av react, typescript og vite.",
-    points: ["React, TypeScript, vite"],
-    image: sikt,
-    pitch: "Sjekk ut prosjektet her👇",
-    source_code_link: "https://github.com/ebbaolss/ebbaolss.github.io",
   },
   {
     name: "Prosjektoppgave programmering i Java",
@@ -209,4 +180,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects, education };
+export { services, experiences, projects, education };

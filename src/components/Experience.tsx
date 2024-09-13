@@ -16,6 +16,7 @@ interface ExperienceProps {
   icon: string;
   iconBg: string;
   date: string;
+  description: string;
   points: string[];
 }
 
@@ -25,20 +26,20 @@ const ExperienceCard: React.FC<ExperienceProps> = ({
   icon,
   iconBg,
   date,
+  description,
   points,
 }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "tertiary", color: "#fff" }}
+      contentStyle={{ background: "tertiary", color: "tertiary" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
-      date={date}
       iconStyle={{ background: iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
           <img
             src={icon}
             alt={company_name}
-            className="w-[100%] h-[100%] object-cover rounded-full"
+            className="w-[120%] h-[100%] object-cover rounded-full"
           />
         </div>
       }
@@ -48,6 +49,8 @@ const ExperienceCard: React.FC<ExperienceProps> = ({
         <h4 className="text-secondary text-[16px] font-semibold">
           {company_name}
         </h4>
+        <h4 className="text-secondary text-sm text-lg mt-1 ">{date}</h4>
+        <p className="text-secondary mt-3">{description}</p>
         <ul className="mt-5 list-disc list-inside">
           {points.map((point, index) => (
             <li
@@ -77,7 +80,7 @@ const Experience = () => {
         <h2 className={styles.sectionHeadText}>Work Experience.</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
+        <VerticalTimeline lineColor="#CCC5B9">
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
           ))}

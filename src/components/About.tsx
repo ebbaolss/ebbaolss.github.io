@@ -11,26 +11,31 @@ interface ServiceCardProps {
   index: number;
   title: string;
   icon: string;
+  url: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  index,
+  title,
+  icon,
+  url,
+}) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", 0.2, 3)}
-        className="w-full p-[3px] rounded-[20px] shadow-card"
-      >
-        <div
-          key={index}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <Tilt className="xs:w-[200px] w-full">
+        <motion.div
+          variants={fadeIn("right", "spring", 0.2, 3)}
+          className="w-full h-[50px] p-1 rounded-[20px] shadow-card"
         >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-[#454441] text-[20px] font-bold text-center">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
+          <div
+            key={index}
+            className="bg-tertiary rounded-[5px] py-3 px-12 min-h-[50px] flex justify-evenly items-center w-full h-full"
+          >
+            <img src={icon} alt={title} className="w-25 h-25 object-contain" />
+          </div>
+        </motion.div>
+      </Tilt>
+    </a>
   );
 };
 
@@ -46,9 +51,14 @@ const About: React.FC = () => {
           variants={fadeIn("right", "", 0, 0.5)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          👋 Hi! My name is Ebba, im 23 years old and currently studing the 5th
-          year of my masters in Informatics: Programming and System Architecture
-          at the University of Oslo.
+          👋 Hei, og velkommen til min portefølje! Jeg heter Ebba, er 23 år
+          gammel og studerer siste året på en master i informatikk med
+          spesialisering i programmering og systemarkitektur ved Universitetet i
+          Oslo. Jeg har en stor interesse for apputvikling, gode løsninger og ny
+          teknologi. Med denne nettsiden utforsker jeg mer frontend-utvikling.{" "}
+          <br />
+          Sjekk ut prosjektene mine nedenfor for å få et innblikk i mine
+          ferdigheter og erfaringer.
         </motion.p>
         <Tilt className="xs:w-[250px] w-full">
           <motion.img
@@ -59,7 +69,7 @@ const About: React.FC = () => {
           />
         </Tilt>
       </motion.div>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex justify-end gap-5">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

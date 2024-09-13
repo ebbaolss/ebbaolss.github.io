@@ -3,7 +3,6 @@ import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
-import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -32,6 +31,9 @@ import vippsinternship from "./vippsintership.png";
 import in2030 from "./IN2030.png";
 import bekk from "./BEKK.png";
 import sikt from "./Sikt-app.png";
+import linkedin from "./linkedin.png";
+import github from "./github.png";
+import portfolio from "./portfolio-project.png";
 
 export {
   logo,
@@ -39,7 +41,6 @@ export {
   creator,
   mobile,
   web,
-  github,
   menu,
   close,
   css,
@@ -66,4 +67,7 @@ export {
   vippsinternship,
   sikt,
   in2030,
+  linkedin,
+  github,
+  portfolio,
 };

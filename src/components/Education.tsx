@@ -26,7 +26,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   degree,
   info,
-  points,
   type,
   date,
   iconBg,
@@ -35,7 +34,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     <Tilt className=" mt-20 w-[50vw] mx-auto items-center">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.2, 3)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+        className="w-full rounded-[20px] shadow-card"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0 }}
@@ -62,16 +61,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           </h4>
           <h4 className="text-secondary text-[16px]">{date}</h4>
           <p className="my-3 text-secondary"> {info}</p>
-          <ul className="mt-5 list-disc list-outside">
-            {points.map((point, index) => (
-              <li
-                key={index}
-                className="text-secondary text-[14px] pl-1 tracking-wider pt-2"
-              >
-                {point}
-              </li>
-            ))}
-          </ul>
         </div>
       </motion.div>
     </Tilt>
