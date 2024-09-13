@@ -81,7 +81,7 @@ const Education = () => {
         <h2 className={styles.sectionHeadText}>Education.</h2>
       </motion.div>
       {education.map((degree, index) => (
-        <motion.div className="mt-20">
+        <motion.div className="mt-20" key={index}>
           <ServiceCard
             index={index}
             institution={degree.institution}
