@@ -29,7 +29,7 @@ const ExperienceCard: React.FC<ExperienceProps> = ({
 }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#1d1836", color: "#fff" }}
+      contentStyle={{ background: "tertiary", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={date}
       iconStyle={{ background: iconBg }}
@@ -44,7 +44,7 @@ const ExperienceCard: React.FC<ExperienceProps> = ({
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{title}</h3>
+        <h3 className="text-secondary text-[24px] font-bold">{title}</h3>
         <h4 className="text-secondary text-[16px] font-semibold">
           {company_name}
         </h4>
@@ -52,7 +52,7 @@ const ExperienceCard: React.FC<ExperienceProps> = ({
           {points.map((point, index) => (
             <li
               key={index}
-              className="text-white-100 text-[14px] pl-1 tracking-wider pt-2"
+              className="text-secondary text-[14px] pl-1 tracking-wider pt-2"
             >
               {point}
             </li>

@@ -14,6 +14,7 @@ interface ProjectProps {
   description: string;
   points: string[];
   image: string;
+  pitch: string;
   source_code_link: string;
 }
 
@@ -24,6 +25,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   description,
   points,
   image,
+  pitch,
   source_code_link,
 }) => {
   return (
@@ -35,7 +37,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       initial="hidden"
       animate="show"
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="w-full sm:w-[400px] bg-tertiary rounded-lg shadow-lg overflow-hidden"
+      className="w-full sm:w-[450px] bg-tertiary rounded-lg shadow-lg overflow-hidden p-[3px] shadow-card"
     >
       <Tilt
         options={{
@@ -45,32 +47,30 @@ const ProjectCard: React.FC<ProjectProps> = ({
         }}
         className="w-full"
       >
-        <a
-          href={source_code_link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <div className="relative w-full h-[250px] overflow-hidden rounded-t-lg bg-white p-2 border border-gray-200">
-            <img
-              src={image}
-              alt={name}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-5">
-            <h3 className="text-white text-xl font-bold">{name}</h3>
-            <h4 className="text-secondary text-lg mt-1">{date}</h4>
-            <p className="text-secondary mt-2">{description}</p>
-            <ul className="mt-4 list-disc list-inside text-white">
-              {points.map((point, index) => (
-                <li key={index} className="text-sm">
-                  {point}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </a>
+        <div className="relative w-full h-[250px] overflow-hidden rounded-t-lg bg-white p-2">
+          <img src={image} alt={name} className="w-full h-full object-cover" />
+        </div>
+        <div className="p-5">
+          <h3 className="text-secondary text-xl font-bold">{name}</h3>
+          <h4 className="text-secondary text-lg mt-1">{date}</h4>
+          <p className="text-secondary mt-2">{description}</p>
+          <ul className="mt-4 list-disc list-inside text-secondary">
+            {points.map((point, index) => (
+              <li key={index} className="text-sm">
+                {point}
+              </li>
+            ))}
+          </ul>
+          <p className="text-secondary mt-2 font-semibold">{pitch}</p>
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            {source_code_link}
+          </a>
+        </div>
       </Tilt>
     </motion.div>
   );

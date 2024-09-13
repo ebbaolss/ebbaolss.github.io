@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => {
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", 0.2, 3)}
-        className="w-full bg-gradient-to-r from-orange-500 to-pink-500 p-[3px] rounded-[20px] shadow-card"
+        className="w-full p-[3px] rounded-[20px] shadow-card"
       >
         <div
           key={index}
@@ -55,11 +55,11 @@ const About: React.FC = () => {
             src={profile}
             variants={fadeIn("left", "spring", 0.1, 1)}
             alt="Profile"
-            className="w-60 h-60 rounded-full object-cover border-white-200 shadow-lg "
+            className="w-full max-w-xs h-auto rounded-full object-cover border-white-200 shadow-lg"
           />
         </Tilt>
       </motion.div>
-      <div className="mt-20 flex flex-warp gap-10">
+      <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

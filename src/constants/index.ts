@@ -5,13 +5,14 @@ import {
   javascript,
   html,
   css,
-  carrent,
-  jobit,
-  tripguide,
   ucberkeley,
   rebel,
   uio,
   vipps,
+  bekk,
+  sikt,
+  in2030,
+  vippsinternship,
   aider,
 } from "../assets";
 
@@ -156,31 +157,55 @@ const education = [
 
 const projects = [
   {
-    name: "Car Rent",
-    date: "Mars 2023 - June 2023",
+    name: "Vipps Summerinternship",
+    date: "Juni 2024 - August 2024",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    points: ["Kotlin", "React", "Pyton"],
-    image: carrent,
-    source_code_link: "https://github.com/",
+      "I sommer jobbet jeg hos Vipps MobilePay der vi jobbet med to løsninger som vil gjøre hverdagen enklere for folk flest. Den ene løsningen tar for seg gjentatte betalinger mellom personer, og den andre gjør deling av utgifter enklere og mer oversiktlig. Løsningene ble utviklet i IOS appen til Vipps.",
+    points: ["IOS, Go"],
+    image: vippsinternship,
+    pitch: "Sjekk ut prosjektet vårt her👇",
+    source_code_link:
+      "https://www.vipps.no/om-oss/nyheter/studenter-med-ukelønn-løsning-i-vipps/",
   },
   {
-    name: "Job IT",
-    date: "Mars 2023 - June 2023",
+    name: "Sikt - En applikasjon for fjelltur-vandrere ",
+    date: "Mars 2023 - Juni 2023",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    points: ["Kotlin", "React", "Pyton"],
-    image: jobit,
-    source_code_link: "https://github.com/",
+      "Større prosjektarbeid innen software engineering der vi i team utviklet en android app, for visualisering av skydekke til fjelltopper i Norge. Værdata ble hentet fra APIer til Metrologisk Institutt. I prosjektarbeidet ble det benyttet Jetpack Compose med Kotlin for utvikling og Scrum, Kanban og Scrumban for arbeidsmetodikk. ✨Sikt ble kåret til en av årets beste apper i emnet vår 2023.✨",
+    points: ["Kotlin"],
+    image: sikt,
+    pitch: "Sjekk ut prosjektet her👇",
+    source_code_link: "https://github.com/ebbaolss/IN2000-Sikt",
   },
   {
-    name: "Trip Guide",
+    name: "Portfolio nettside",
+    date: "August 2024",
+    description:
+      "Har nylig begynt å lære meg react på egenhånd via youtube og har i forbindelse med dette laget denne portefølje-nettsiden ved bruk av react, typescript og vite.",
+    points: ["React, TypeScript, vite"],
+    image: sikt,
+    pitch: "Sjekk ut prosjektet her👇",
+    source_code_link: "https://github.com/ebbaolss/ebbaolss.github.io",
+  },
+  {
+    name: "Prosjektoppgave programmering i Java",
+    date: "August 2022 - Desember 2022",
+    description:
+      "Et større semesterprosjekt i Java der vi i team på to laget en interpret for programmeringsspråket Asp.",
+    points: ["Java"],
+    image: in2030,
+    pitch: "Sjekk ut prosjektet her👇",
+    source_code_link: "https://github.com/ebbaolss/IN2030",
+  },
+  {
+    name: "Andre prosjekter og prestasjoner",
     date: "Mars 2023 - June 2023",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    points: ["Kotlin", "React", "Pyton"],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+      "Vinner av Bekk sin kodekamp ved  UiO vår 2023 der vi i team løste ulike oppgaver innen problemløsning, programmering og samarbeid.",
+    points: [""],
+    image: bekk,
+    pitch: "",
+    source_code_link: "",
   },
 ];
 

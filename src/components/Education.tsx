@@ -54,19 +54,19 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               className="w-[100%] h-[100%] object-cover rounded-full"
             />
           </div>
-          <h3 className="text-white text-[20px] font-bold text-center">
+          <h3 className="text-secondary text-[20px] font-bold text-center">
             {degree}
           </h3>
           <h4 className="text-secondary my-2 text-[16px] font-semibold">
             {type}
           </h4>
           <h4 className="text-secondary text-[16px]">{date}</h4>
-          <p className="my-3"> {info}</p>
+          <p className="my-3 text-secondary"> {info}</p>
           <ul className="mt-5 list-disc list-outside">
             {points.map((point, index) => (
               <li
                 key={index}
-                className="text-white-100 text-[14px] pl-1 tracking-wider pt-2"
+                className="text-secondary text-[14px] pl-1 tracking-wider pt-2"
               >
                 {point}
               </li>

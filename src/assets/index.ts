@@ -28,10 +28,10 @@ import aider from "./company/aider.png";
 import ucberkeley from "./company/ucberkeley.png";
 import rebel from "./company/rebel.png";
 import uio from "./company/uio.png";
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import vippsinternship from "./vippsintership.png";
+import in2030 from "./IN2030.png";
+import bekk from "./BEKK.png";
+import sikt from "./Sikt-app.png";
 
 export {
   logo,
@@ -57,12 +57,13 @@ export {
   threejs,
   profile,
   berkeley,
-  carrent,
-  jobit,
-  tripguide,
   vipps,
   aider,
   uio,
   rebel,
   ucberkeley,
+  bekk,
+  vippsinternship,
+  sikt,
+  in2030,
 };
