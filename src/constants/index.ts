@@ -128,16 +128,6 @@ const education = [
 
 const projects = [
   {
-    name: "Portfolio nettside",
-    date: "August 2024",
-    description:
-      "Har nylig begynt å lære meg react på egenhånd via youtube og har i forbindelse med dette laget denne portefølje-nettsiden ved bruk av react, typescript og vite.",
-    points: ["React, TypeScript, vite"],
-    image: portfolio,
-    pitch: "Sjekk ut prosjektet her👇",
-    source_code_link: "https://github.com/ebbaolss/ebbaolss.github.io",
-  },
-  {
     name: "Vipps Summerinternship",
     date: "Juni 2024 - August 2024",
     description:
@@ -157,6 +147,16 @@ const projects = [
     image: sikt,
     pitch: "Sjekk ut prosjektet her👇",
     source_code_link: "https://github.com/ebbaolss/IN2000-Sikt",
+  },
+  {
+    name: "Portfolio nettside",
+    date: "August 2024",
+    description:
+      "Har nylig begynt å lære meg react på egenhånd via youtube og har i forbindelse med dette laget denne portefølje-nettsiden ved bruk av react, typescript og vite.",
+    points: ["React, TypeScript, vite"],
+    image: portfolio,
+    pitch: "Sjekk ut prosjektet her👇",
+    source_code_link: "https://github.com/ebbaolss/ebbaolss.github.io",
   },
   {
     name: "Prosjektoppgave programmering i Java",
