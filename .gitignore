@@ -1,2 +1,23 @@
-node_modules
-*.env
+# Ignore everything
+/*
+
+# Except the dist directory
+!/dist
+
+# Optional: Ignore specific files in dist if needed
+# /dist/*.log
+
+# Ignore specific files and directories not relevant to the dist build
+/node_modules/
+/build/
+/public/
+/src/
+*.log
+*.lock
+*.json
+*.ts
+*.config.js
+yarn.lock
+package-lock.json
+tsconfig*.json
+vite.config.ts
